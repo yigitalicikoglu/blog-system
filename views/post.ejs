@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title><%= title %></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= title %></title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1><%= title %></h1>
-    <p><%= date %></p>
-    <p><%= body %></p>
-    <a href="/">Back to home</a>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4 py-4">
+      <h1 class="text-xl font-bold text-gray-800">Modern Blog</h1>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <main class="container mx-auto px-4 py-10">
+    <article class="bg-white rounded-lg shadow p-6">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4"><%= title %></h2>
+      <p class="text-gray-600 mb-4"><%= date %></p>
+      <div class="text-gray-700 leading-relaxed mb-6">
+        <%= body %>
+      </div>
+      <a href="/" class="text-blue-500 hover:underline">Back to home</a>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow mt-10">
+    <div class="container mx-auto px-4 py-4 text-center">
+      <p class="text-gray-600">Modern Blog</p>
+    </div>
+  </footer>
+
 </body>
 </html>
